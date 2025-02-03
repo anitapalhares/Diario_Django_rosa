@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Diário Pessoal">
+    <meta name="author" content="Seu Nome">
+    <link rel="stylesheet" type="text/css" href="{% static 'diarioapp/css/style.css' %}">
+    <title>Meu lindo amado e querido diarinho fofinho</title>
+</head>
+<body>
+    <header>
+        <h1>Diário Pessoal</h1>
+        <p>Registre seus pensamentos e sentimentos aqui.</p>
+    </header>
+
+    <main>
+        <section class="entry-form">
+            <h2>Escreva seu diário:</h2>
+            <form action="#" method="post">
+                {% csrf_token %}
+                
+                <label for="date">Data:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="day-summary">Como foi seu dia?</label>
+                <textarea id="day-summary" name="day-summary" rows="5" placeholder="Descreva seu dia..." required></textarea>
+
+                <button type="submit">Salvar Entrada no Diário</button>
+            </form>
+        </section>
+
+        <section class="mood-form">
+            <h2>Como você está se sentindo?</h2>
+            <form action="#" method="post">
+                {% csrf_token %}
+                
+                <label for="mood">Escolha seu estado emocional:</label>
+                <select id="mood" name="mood">
+                    <option value="feliz">Feliz</option>
+                    <option value="triste">Triste</option>
+                    <option value="ansioso">Ansioso</option>
+                    <option value="calmo">Calmo</option>
+                    <option value="irritado">Irritado</option>
+                    <option value="entediado">Entediado</option>
+                </select>
+                
+                <button type="submit">Registrar Humor</button>
+            </form>
+        </section>
+
+        <section class="mood-over-time">
+            <h2>Registre seu humor ao longo do dia:</h2>
+            <form action="#" method="post">
+                {% csrf_token %}
+                
+                <label for="moment">Momento do dia:</label>
+                <input type="text" id="moment" name="moment" placeholder="Por exemplo: Manhã, Tarde, Noite" required>
+                
+                <label for="mood-time">Como você se sentiu neste momento?</label>
+                <select id="mood-time" name="mood-time">
+                    <option value="feliz">Feliz</option>
+                    <option value="triste">Triste</option>
+                    <option value="ansioso">Ansioso</option>
+                    <option value="calmo">Calmo</option>
+                    <option value="irritado">Irritado</option>
+                    <option value="entediado">Entediado</option>
+                </select>
+                
+                <button type="submit">Registrar Humor do Momento</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Diário Pessoal. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

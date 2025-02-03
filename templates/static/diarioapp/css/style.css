@@ -1,0 +1,136 @@
+/* Resetando margens e paddings padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonte padrão */
+body {
+    font-family: 'Times New Roman', sans-serif;
+    line-height: 1.6;
+    background-color: #fce4ec; /* Rosa claro de fundo */
+    color: #333;
+}
+
+/* Estilos do header */
+header {
+    text-align: center;
+    background-color: #f48fb1; /* Rosa mais forte para o header */
+    color: white;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1.1rem;
+}
+
+/* Estilo do formulário de entrada */
+.entry-form,
+.mood-form,
+.mood-over-time {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos das seções */
+.entry-form h2,
+.mood-form h2,
+.mood-over-time h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #f48fb1; /* Rosa mais forte para os títulos */
+}
+
+/* Estilo dos labels dos campos */
+.entry-form label,
+.mood-form label,
+.mood-over-time label {
+    font-size: 1.1rem;
+    display: block;
+    margin-top: 10px;
+}
+
+/* Estilo dos campos de input, select, e textarea */
+.entry-form input,
+.entry-form select,
+.entry-form textarea,
+.mood-form input,
+.mood-form select,
+.mood-form textarea,
+.mood-over-time input,
+.mood-over-time select,
+.mood-over-time textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.entry-form textarea,
+.mood-form textarea,
+.mood-over-time textarea {
+    resize: vertical;
+}
+
+/* Botões */
+.entry-form button,
+.mood-form button,
+.mood-over-time button {
+    background-color: #f48fb1; /* Rosa para o botão */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.entry-form button:hover,
+.mood-form button:hover,
+.mood-over-time button:hover {
+    background-color: #f06292; /* Rosa um pouco mais forte para o hover */
+}
+
+/* Estilo do rodapé */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f48fb1; /* Rosa para o rodapé */
+    color: white;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .entry-form input,
+    .entry-form select,
+    .entry-form textarea,
+    .mood-form input,
+    .mood-form select,
+    .mood-form textarea,
+    .mood-over-time input,
+    .mood-over-time select,
+    .mood-over-time textarea {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .entry-form button,
+    .mood-form button,
+    .mood-over-time button {
+        width: 100%;
+    }
+}
