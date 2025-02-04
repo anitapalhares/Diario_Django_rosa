@@ -1,4 +1,4 @@
-na minha maquina funciona
+Na minha maquina funciona
 
 
-vai ter que usar o video do pythonando
+Vai ter que usar o video do pythonando
